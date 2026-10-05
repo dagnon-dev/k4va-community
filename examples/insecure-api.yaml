@@ -1,0 +1,10 @@
+openapi: 3.0.3
+info:
+  title: Payments API
+  version: 1.0.0
+paths:
+  /payments:
+    post:
+      responses:
+        '200':
+          description: Payment created.

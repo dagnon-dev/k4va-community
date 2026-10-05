@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Orders API
+  version: 1.0.0
+  description: A synthetic API for order management.
+  contact:
+    name: Orders API Support
+    url: https://example.com/support
+servers:
+  - url: https://api.example.com/v1
+security:
+  - bearerAuth: []
+paths:
+  /orders:
+    get:
+      operationId: listOrders
+      summary: List orders
+      responses:
+        '200':
+          description: Orders returned.
+        '401':
+          description: Authentication required.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
